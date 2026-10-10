@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.env
+.env.*
+!.env.example
+__pycache__
+*.pyc
+*.db
+backend/storage/uploads/*
+backend/storage/reports/*

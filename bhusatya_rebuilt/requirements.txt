@@ -1,0 +1,18 @@
+# BhuSatya - Python Backend Dependencies
+fastapi>=0.117.0
+uvicorn>=0.37.0
+pydantic>=2.11.0
+email-validator>=2.3.0
+sqlalchemy>=2.0.0
+alembic>=1.14.0
+bcrypt>=4.0.0
+pyjwt>=2.10.0
+python-multipart>=0.0.20
+opencv-python>=4.11.0
+numpy>=2.0.0
+pillow>=11.0.0
+pypdf>=5.0.0
+reportlab>=4.0.0
+httpx>=0.28.0
+pytest>=8.0.0
+requests>=2.32.0

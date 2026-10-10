@@ -1,0 +1,6 @@
+{
+  "name": "BhuSatya - Cadastral Title Verification & Registry Intelligence",
+  "description": "Unified AI land title verification, automated mutation tracking, cadastral boundary inspection, and comprehensive buyer diligence report under DILRMP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

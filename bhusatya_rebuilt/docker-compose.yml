@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bhusatya_platform
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - DATABASE_URL=sqlite:///./backend/storage/bhusatya.db
+      - SECRET_KEY=bhusatya-production-random-key-replace-in-env
+      - OTP_PROVIDER=console
+      - UPLOAD_DIR=/app/backend/storage/uploads
+      - REPORTS_DIR=/app/backend/storage/reports
+    volumes:
+      - bhusatya_storage:/app/backend/storage
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  bhusatya_storage:
+    driver: local

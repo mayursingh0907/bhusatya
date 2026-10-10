@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: bhusatya-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: OTP_PROVIDER
+        value: console
+      - key: DATABASE_URL
+        value: sqlite:///./backend/storage/bhusatya.db
+      - key: UPLOAD_DIR
+        value: /app/backend/storage/uploads
+      - key: REPORTS_DIR
+        value: /app/backend/storage/reports
+      - key: FRONTEND_URL
+        sync: false
